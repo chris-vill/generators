@@ -4,7 +4,8 @@
   "description": "My list of Yeoman generators",
   "main": "index.js",
   "scripts": {
-    "link-all": "echo \"Error: no test specified\" && exit 1"
+    "make-executable": "chmod +x ./link-all.bash",
+    "link-all": "yarn make-executable && ./link-all.bash"
   },
   "repository": {
     "type": "git",
