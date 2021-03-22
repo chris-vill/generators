@@ -1,0 +1,19 @@
+{
+  "name": "generator-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ExtendedGenerator.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yosay": "^2.0.2",
+    "yeoman-generator": "^5.2.0"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Christopher Villaran <villaran.christopher@gmail.com",
+  "license": "UNLICENSED"
+}
