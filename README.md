@@ -10,6 +10,19 @@
 
 ### ToDo
 - Extract Sass & FontAwesome to separate generators
+- Add generators for:
+```
+- Vue
+- Pug
+- Chakra-UI
+- Tailwind CSS
+- Node.js
+- Express
+- Apollo Server / Client
+- Objection.js
+- Knex.js
+- PostgreSQL
+```
 - Fix this error:
 ```
 warning Error running install script for optional dependency: "/Users/ChrisVill/Projects/Practice/WebDev/Generators/yo-react/node_modules/fsevents: Command failed.
