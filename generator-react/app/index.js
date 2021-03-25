@@ -41,11 +41,6 @@ module.exports = class extends ExtendedGenerator {
     this.options.projectName = this.options.path.match(regex)[1];
 
     if (this.options.gitSSH) {
-      // SSH - git@github.com:chris-vill/react-resume.git
-      // URL - git+https://github.com/chris-vill/react-resume.git
-      // BUGs - https://github.com/chris-vill/react-resume/issues
-      // HOME - https://github.com/chris-vill/react-resume#readme
-
       this.options.gitRepository = this.options.gitSSH
         .replace("@", "+https://")
         .replace(/github.com(\:)/, "/");
@@ -80,7 +75,7 @@ module.exports = class extends ExtendedGenerator {
     this.log(`  create ${ this.options.path }`)
 
     this._stepLog("Creating Files");
-    this._buildTemplate('package.json');
+    this._buildTemplate('package.ejs');
     rawFiles.forEach(f => this._copyRawFiles(f));
   }
 

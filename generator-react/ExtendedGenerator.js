@@ -20,9 +20,14 @@ module.exports = class extends Generator {
   }
 
   _buildTemplate(file, options) {
+    const fileMappings = {
+      "package.ejs": "package.json"
+    };
+    const destinationFile = fileMappings[file];
+
     this.fs.copyTpl(
       this.templatePath(file),
-      this.destinationPath(`${this.options.path}/${file}`),
+      this.destinationPath(`${ this.options.path }/${ destinationFile || file }`),
       options || this.options
     );
   }
