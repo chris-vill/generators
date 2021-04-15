@@ -1,4 +1,4 @@
-// RESET =======================================================================
+@use '@styles/abstracts' as *
 
 *
   font-family: Arial, sans-serif
@@ -6,22 +6,14 @@
 html,
 body,
 #root
-  position: absolute
-  top: 0
-  left: 0
-  bottom: 0
-  right: 0
-  margin: 0
-
-ul
-  margin: 0
-  padding: 0
-  list-style-type: none
-
-
-// MAIN =======================================================================
+  +pos-all(absolute, 0)
+  +m(0)
 
 #root
-  display: flex
-  justify-content: center
-  align-items: center
+  +grid
+  place-items: center
+
+ul
+  +m(0)
+  +p(0)
+  list-style: none

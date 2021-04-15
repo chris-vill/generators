@@ -1,0 +1,47 @@
+// One Dimension
+=h($a)
+  height: $a
+
+=w($a)
+  width: $a
+
+=min-h($a)
+  min-height: $a
+
+=min-w($a)
+  min-width: $a
+
+=max-w($a)
+  max-width: $a
+
+=max-h($a)
+  max-height: $a
+
+
+// Two Dimensions
+=hw($a, $b: "")
+  @if $b == ""
+    height: $a
+    width: $a
+
+  @else
+    height: $a
+    width: $b
+
+=min-hw($a, $b: "")
+  @if $b == ""
+    min-height: $a
+    min-width: $a
+
+  @else
+    min-height: $a
+    min-width: $b
+
+=max-hw($a, $b: "")
+  @if $b == ""
+    max-height: $a
+    max-width: $a
+
+  @else
+    max-height: $a
+    max-width: $b

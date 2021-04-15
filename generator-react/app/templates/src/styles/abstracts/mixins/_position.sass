@@ -1,0 +1,80 @@
+// Position Types
+=absolute
+  position: absolute
+
+=relative
+  position: relative
+
+=sticky
+  position: sticky
+
+=fixed
+  position: fixed
+
+
+// For values not specific to position
+=pos($a)
+  position: $a
+
+
+// Position with direction
+=pos-tr($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    top: $a
+    right: $a
+
+  @else
+    top: $a
+    right: $b
+
+=pos-tl($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    top: $a
+    left: $a
+
+  @else
+    top: $a
+    left: $b
+
+=pos-br($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    bottom: $a
+    right: $a
+
+  @else
+    bottom: $a
+    right: $b
+
+=pos-bl($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == 0
+    bottom: $a
+    left: $a
+
+  @else
+    bottom: $a
+    left: $b
+
+
+// Postion with all directions
+=pos-all($pos, $a, $b: "", $c: "", $d: "")
+  position: $pos
+
+  @if $b == "" and $c == "" and $d == ""
+    top: $a
+    right: $a
+    bottom: $a
+    left: $a
+  
+  @else
+    top: $a
+    right: $b
+    bottom: $c
+    left: $d
